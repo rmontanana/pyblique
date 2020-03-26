@@ -118,3 +118,84 @@ Elapsed time: 7.990 seconds
 Average error: 0.080
 Total elapsed time: 46.830 seconds.
 Average elapsed time: 9.366 seconds.
+Validating classifier with 5-fold test...
+Validating classifier with 5-fold test...
+Validating classifier with 5-fold test...
+Validating classifier with 5-fold test...
+Iteration #1
+Error: 0.100
+Elapsed time: 7.775 seconds
+
+Iteration #2
+Error: 0.100
+Elapsed time: 7.886 seconds
+
+Iteration #3
+Error: 0.167
+Elapsed time: 7.720 seconds
+
+Iteration #4
+Error: 0.033
+Elapsed time: 7.080 seconds
+
+Iteration #5
+Error: 0.000
+Elapsed time: 11.941 seconds
+
+Average error: 0.080
+Total elapsed time: 42.406 seconds.
+Average elapsed time: 8.481 seconds.
+Validating classifier with 5-fold test...
+Iteration #1
+Validating classifier with 5-fold test...
+Iteration #1
+Error: 0.067
+Elapsed time: 11.140 seconds
+
+Iteration #2
+Error: 0.067
+Elapsed time: 11.015 seconds
+
+Iteration #3
+Error: 0.067
+Elapsed time: 9.150 seconds
+
+Iteration #4
+Error: 0.133
+Elapsed time: 7.863 seconds
+
+Iteration #5
+Error: 0.100
+Elapsed time: 7.481 seconds
+
+Average error: 0.087
+Total elapsed time: 46.652 seconds.
+Average elapsed time: 9.330 seconds.
+Validating classifier with 5-fold test...
+Iteration #1
+Error: 0.033
+Elapsed time: 11.226 seconds
+
+Iteration #2
+Error: 0.067
+Elapsed time: 11.014 seconds
+
+Iteration #3
+Error: 0.167
+Elapsed time: 12.278 seconds
+
+Iteration #4
+Error: 0.067
+Elapsed time: 8.371 seconds
+
+Iteration #5
+Error: 0.100
+Elapsed time: 5.284 seconds
+
+Average error: 0.087
+Total elapsed time: 48.176 seconds.
+Average elapsed time: 9.635 seconds.
+Validating classifier with 5-fold test...
+Iteration #1
+Validating classifier with 5-fold test...
+Iteration #1

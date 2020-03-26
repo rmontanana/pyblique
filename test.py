@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 from pyblique import error_rate, get_data, ObliqueClassifier
-from sklearn.cross_validation import KFold
+from sklearn.model_selection import KFold
 import argparse
 import os
 import sys
@@ -19,16 +19,17 @@ class Tee:
 
 
 def run(fname, folds):
-    st = time.clock()
+    st = time.time()
     data = get_data("Data/{}.data".format(fname))
     with open("Results/{}_{}folds.txt".format(fname, folds), "a") as f:
         tee = Tee(sys.stdout, f)
         tee("Validating classifier with {}-fold test...".format(folds))
-        kf = KFold(len(data), n_folds=folds)
+        kfm = KFold(n_splits=folds)
+        kf = kfm.split(data)
         avg_error = 0
         it = 1
         for train, test in kf:
-            start = time.clock()
+            start = time.time()
             tee("Iteration #{}".format(it))
             oc = ObliqueClassifier()
             oc.fit(data[train])
@@ -36,11 +37,11 @@ def run(fname, folds):
             actual_labels = data[test][:, -1]
             error = error_rate(predictions, actual_labels)
             tee("Error: {:.3f}".format(error))
-            tee("Elapsed time: {:.3f} seconds".format(time.clock() - start))
+            tee("Elapsed time: {:.3f} seconds".format(time.time() - start))
             tee()
             avg_error += error
             it += 1
-        totaltime = time.clock() - st
+        totaltime = time.time() - st
         tee("Average error: {:.3f}".format(avg_error/folds))
         tee("Total elapsed time: {:.3f} seconds.".format(totaltime))
         tee("Average elapsed time: {:.3f} seconds.".format(totaltime/folds))

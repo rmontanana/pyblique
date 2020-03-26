@@ -142,6 +142,8 @@ class ObliqueClassifier:
 
     def __is_leaf_node(self, data):
         # Returns true/false and the class label (useful if this was a leaf)
+        # rmontanana: returns true is all the labels of the pack are the same
+        # a leaf has the same labels in all samples
         labels = data[:, -1]
         label_all = labels[0]
         return all(label == label_all for label in labels), label_all
